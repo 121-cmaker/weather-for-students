@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="유학생을 위한 간편 날씨 조회 서비스" />
+    <title>유학생을 위한 간편 날씨 조회 서비스</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="weather-app" aria-labelledby="page-title">
+        <p class="eyebrow">WEATHER FOR STUDENTS</p>
+        <h1 id="page-title">유학생을 위한 간편 날씨 조회</h1>
+        <p class="intro">도시 이름을 입력하면 현재 날씨와 오늘의 강수확률을 간편하게 확인할 수 있습니다.</p>
+
+        <form id="weather-form" novalidate>
+          <label for="city-input">도시 이름</label>
+          <div class="search-row">
+            <input id="city-input" name="city" type="text" inputmode="text" autocomplete="address-level2" placeholder="예: Seoul, Busan, 수원" aria-describedby="field-message" />
+            <button id="search-button" type="submit">날씨 조회</button>
+          </div>
+          <p id="field-message" class="field-message" aria-live="polite"></p>
+        </form>
+
+        <section id="result-area" class="result-area" aria-live="polite" aria-atomic="true">
+          <div class="state-card state-guide">
+            <p class="state-label">안내</p>
+            <h2>출발 전 날씨를 확인하세요</h2>
+            <p>도시 이름을 입력하고 ‘날씨 조회’를 누르세요.</p>
+          </div>
+        </section>
+
+        <p class="source-note">날씨 데이터: <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

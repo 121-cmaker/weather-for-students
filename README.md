@@ -17,8 +17,8 @@
 
 ## 4. 공개 주소와 저장소
 
-- 공개 주소: 배포 전 (GitHub Pages 배포 후 주소를 입력합니다.)
-- 저장소 주소: 저장소 생성 전 (공개 GitHub 저장소 주소를 입력합니다.)
+- 공개 주소: https://121-cmaker.github.io/weather-for-students/
+- 저장소 주소: https://github.com/121-cmaker/weather-for-students
 
 ## 5. 사용 방법
 
@@ -43,7 +43,7 @@
 
 ## 8. 검증 기록
 
-세부 기록은 [verification/verification-record.md](verification/verification-record.md)를 참고하세요. 현재 이 문서는 구현 기준의 테스트 계획이며, 실제 브라우저·모바일 검증 결과는 아직 기록하지 않았습니다.
+세부 기록은 [verification/verification-record.md](verification/verification-record.md)를 참고하세요. 현재 이 문서는 구현 기준의 테스트 계획이며, 실제 브라우저·모바일 검증 결과는 별도로 기록해야 합니다.
 
 ## 9. 알려진 한계
 

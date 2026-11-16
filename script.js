@@ -36,6 +36,10 @@ function showLoading() {
   resultArea.innerHTML = `<div class="state-card loading-card" role="status"><div class="spinner" aria-hidden="true"></div><h2>날씨 정보를 불러오는 중입니다...</h2><p>잠시만 기다려주세요.</p></div>`;
 }
 
+function showInputError() {
+  resultArea.innerHTML = `<div class="state-card error-card" role="alert"><p class="state-label">입력 확인</p><h2>도시 이름을 다시 확인해주세요.</h2><p>한글 또는 영문 도시 이름을 2자 이상 60자 이하로 입력할 수 있습니다.</p></div>`;
+}
+
 function showEmpty(city) {
   resultArea.innerHTML = `<div class="state-card"><p class="state-label">검색 결과 없음</p><h2>‘${escapeHtml(city)}’에 대한 도시를 찾지 못했습니다.</h2><p>도시 이름의 철자를 확인한 후 다시 입력해주세요.</p></div>`;
 }
@@ -59,7 +63,12 @@ function escapeHtml(value) {
 async function searchWeather(rawCity) {
   const city = rawCity.trim();
   const error = validateCity(city);
-  if (error) { setFieldError(error); cityInput.focus(); return; }
+  if (error) {
+    setFieldError(error);
+    showInputError();
+    cityInput.focus();
+    return;
+  }
   setFieldError();
   lastCity = city;
   if (activeController) activeController.abort();
